@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>物业收费</title>
+<style type="text/css">
+	div,h3{
+	text-align: center;
+	border: 1px solid black;
+	width: 100%;
+	padding: 5px;
+	background-color: #EECBAD;
+	margin: 0 auto;
+	}
+	.table1{
+	margin: 0 auto;
+	margin-top:20px;
+	}
+	.table2{
+	margin: 0 auto;
+	margin-top: 20px;
+	}
+	.th1{
+	width: 120px;
+	
+	}
+</style>
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+var time1= function CurentTime(){ 
+    var now = new Date();
+    
+    var year = now.getFullYear();       //年
+    var month = now.getMonth() + 1;     //月
+    var day = now.getDate();            //日
+    
+    var hh = now.getHours();            //时
+    var mm = now.getMinutes();          //分
+    var clock = year + "-";
+    
+    if(month < 10)
+        clock += "0";
+    
+    clock += month + "-";
+    
+    if(day < 10)
+        clock += "0";
+        
+    clock += day + " ";
+    
+    if(hh < 10)
+        clock += "0";
+        
+    clock += hh + ":";
+    if (mm < 10) clock += '0'; 
+    clock += mm ; 
+
+    return(clock); 
+};
+var sel=function gradeChange() {
+    var objS = document.getElementById("select1");
+    var grade = objS.options[objS.selectedIndex].value;
+    return(grade);
+ 
+};
+$(function(){
+	$("input:last").click(function(){
+		var named=$("<td></td>");
+		var btd=$("<td></td>");
+		var dizhitd=$("<td></td>");
+		//var fangshi=$("<td></td>");
+		var deltd=$("<td><input type='button' value='删除'></td>");
+		deltd.children().click(function(){
+			$(this).parent().parent().remove();
+		})
+		named.text($("input:eq(1)").val());
+		btd.text($("input:eq(2)").val());
+		dizhitd.text($("input:eq(3)").val());
+		
+		var tr=$("<tr></tr>");
+		tr.append(named);
+		tr.append(btd);
+		tr.append(sel);
+		tr.append(dizhitd);
+		
+		
+		tr.append(time1);
+		tr.append(deltd);
+		
+		$(".table2").append(tr)
+	})
+	
+})
+	
+
+</script>
+</head>
+<body>
+	<h3>收费项目</h3>
+	<div>
+	收费类别:&nbsp;&nbsp;<select >
+	<option >请选择</option>
+	<option >物业费</option>
+	<option >天然气</option>
+	<option >水费</option>
+	<option >电费</option>
+	</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="shouye.html"><input type="button" value="返回"> </a>
+	</div>
+	<div>
+		<table border="1" cellspacing="0" class="table1">
+		<tr>
+		<th rowspan="2">业主姓名</th>
+		<th rowspan="2">充值卡号</th>
+		<th rowspan="2">收费方式</th>
+		<th>价格(元)</th>
+		<th rowspan="2">实收费用(元)</th>
+		<th>&nbsp;&nbsp;&nbsp;备注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		</tr>
+		<tr>
+		<th>5.55</th>
+		<th></th>
+		</tr>
+		<tr>
+			<th>
+				<input type="text">
+			</th>
+			<th>
+				<input type="text">
+			</th>
+			<th>
+			<select  id="select1">
+				<option onclick="gradeChange()">现金</option>
+				<option onclick="gradeChange()">微信</option>
+				<option onclick="gradeChange()">支付宝</option>
+				<option onclick="gradeChange()">银行卡</option>
+			</select>
+			</th>
+			<th>4</th>
+			<th>
+				<input type="number">
+			</th>
+			<th>
+				<input type="button" value="确定">
+			</th>
+		</tr>
+		</table>
+		<table border="1" cellspacing="0" class="table2">
+			<tr>
+			<th class="th1">业主姓名</th>
+			<th class="th1">充值卡号</th>
+			<th class="th1">收费方式</th>
+			<th class="th1">实收费用</th>
+			<th class="th1">收费时间</th>
+			<th class="th1">操作</th>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

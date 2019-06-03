@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>物业收费</title>
+<style type="text/css">
+	#div1,body>h3,div>h3{
+	text-align: center;
+	}
+	table {
+	margin: 0 auto;
+	}
+</style>
+</head>
+<body>
+	<h3>收费统计表</h3>
+	<div id="div1">
+	统计年份:&nbsp;&nbsp;<select>
+	<option>统计年份</option>
+	<option>2016年</option>
+		<option>2011年</option>
+	<option>2017年</option>
+	<option>2018年</option>
+	<option>2019年</option>
+	</select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<select id="s1" onchange="myfn()">
+		<option>选择栋数</option>
+		<option value="0">1栋</option>
+		<option value="1">2栋</option>
+		<option value="2">3栋</option>
+	</select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" value="查询">&nbsp;&nbsp;
+	<a href="shouye.html"><input type="button" value="返回首页"></a>
+		</div>
+		<div>
+			<h3>物业收费统计</h3>
+			<table border="1px" cellspacing="0">
+				<tr >
+					<th>序号</th>
+					<th>门牌号</th>
+					<th>业主姓名</th>
+					<th>年应收(元)</th>
+					<th>上年尾欠</th>
+					<th>滞纳金</th>
+					<th>本年应收</th>
+					<th>本年实收</th>
+					<th>收费日期</th>
+					<th>结余(元)</th>
+					<th>杂项</th>
+				</tr>
+				<tr >
+					<th>1</th>
+					<th>A1105</th>
+					<th>张三</th>
+					<th>1237.23</th>
+					<th>0</th>
+					<th>0</th>
+					<th>1237.23</th>
+					<th>1238</th>
+					<th>2015-03-01</th>
+					<th>0.77</th>
+					<th>0</th>
+				</tr>
+			</table>
+		</div>
+</body>
+</html>

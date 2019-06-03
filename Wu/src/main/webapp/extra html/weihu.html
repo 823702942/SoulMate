@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"href="weihu.css">
+<script type="text/javascript">
+onload=function(){
+	var d=new Date();
+	myh3.innerText=d.toLocaleTimeString();
+}
+setInterval(function(){
+	var d=new Date();
+	myh3.innerText=d.toLocaleTimeString();
+},1000);
+	function showTime(){
+		//转回时分秒
+		var h=parseInt(total/3600);
+		var m=parseInt(total%3600/60);
+		var s=total%60;
+		h=h<10?"0"+h:h;
+		m=m<10?"0"+m:m;
+		s=s<10?"0"+s:s;
+		myh2.innerText=h+":"+m+":"+s;
+	}
+</script>
+</head>
+<body>
+<header>
+				<div>
+				<img class="d1" src="http://haoke365b.ticp.net:91/images/logo.png">
+				<span class="d1">天上人间物业管理系统</span>
+				<img class="d3" src="http://haoke365b.ticp.net:91/images/time.gif">
+				<h2 id="myh3"></h2>
+				</div>
+</header>
+<article>
+<div class="ms">
+		<span class="zz">hi,诸葛经理<img src="http://haoke365b.ticp.net:91/images/remind.gif">
+		
+		<img src="http://haoke365b.ticp.net:91/images/hot.gif">
+		</span>
+		<input type="button"value="注销退出"class="zx">
+				<select name="city"class="xl">
+				<option>个人设定</option>
+				<option>消息设置</option>
+				<option>修改密码</option>
+				<option>修改资料</option>
+				<option>万年历</option>
+				<option>在线人员</option>
+				<option>快捷方式</option>
+				<option>岗位职责</option>
+				<option selected="selected">个人选项</option>
+				</select>
+			<input type="button" value=刷新 onclick="history.go(0)" class="sx">
+</div>
+<div>
+<table  align="center">
+		<tr>
+				<td>选择房产：
+				<select name="city">
+				<option>中东首座</option>
+				<option>盈科大厦</option>
+				<option>菜批市场</option>
+				<option>东风仓库</option>
+				<option>地下车库</option>
+				<option selected="selected"></option>
+				</select>
+				</td>
+				<td>楼宇：
+				<select name="city">
+				<option>1号楼</option>
+				<option>2号楼</option>
+				<option>3号楼</option>
+				<option>4号楼</option>
+				<option>5号楼</option>
+				<option>6号楼</option>
+				<option selected="selected"></option>
+				</select>
+				</td>
+				<td>单元：
+				<select name="city">
+				<option>1单元</option>
+				<option>2单元</option>
+				<option>3单元</option>
+				<option selected="selected"></option>
+				</select>
+				</td>
+		<br></tr>
+			<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;房间：
+				<select name="city">
+				<option>101室&nbsp;&nbsp;&nbsp;&nbsp;</option>
+				<option>102室</option>
+				<option>103室</option>
+				<option selected="selected"></option>
+				</select>
+				</td>
+				<td>状态：
+				<select name="city">
+				<option>待审批</option>
+				<option>审批已通过</option>
+				<option>已验收</option>
+				<option selected="selected"></option>
+				</select>
+				</td>
+				<td>
+			申请人：<input type="text">
+			</td>
+		</tr>
+		<tr>
+				<td>请修内容：
+				<input type="text"></td>
+				<td><input type="button"value="查询">
+				<input type="button"value="清空">
+				<input type="button"value="增加"></td>
+				<td><input type="button"value="删除">
+				<input type="button"value="导出">
+				关键词：<input type="text">
+				<input type="button"value="定位房间"></td>
+		</tr>
+</table>
+</div>
+<div class="a1">
+<table border="1" cellspacing="0">
+		<tr>
+				<td><img src="http://haoke365b.ticp.net:91/images/refresh.gif"></td>
+				<td>所属公司</td>
+				<td>房产</td>
+				<td>申请人</td>
+				<td>申请日期</td>
+				<td>修理费用</td>
+				<td>状态</td>
+				<td>请修内容</td>
+				<td>审批人</td>
+				<td>审批时间</td>
+				<td>审批意见</td>
+				<td>验收意见</td>
+		</tr>
+</table>
+</div>
+</article><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+	<div>
+		<p> 所属公司：海淀子公司    部门：海淀子公司    职位：部门经理    角色：物业分公司经理    登录时间：2019-05-06 20:06:04</p>
+	</div>
+</footer>
+</body>
+</html>

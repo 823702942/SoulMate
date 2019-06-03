@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<style type="text/css">
+</style>
+
+<link rel="stylesheet" href="shouye.css">
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	function CurentTime() {
+		var now = new Date();
+		var year = now.getFullYear(); //年
+		var month = now.getMonth() + 1; //月
+		var day = now.getDate(); //日
+
+		var hh = now.getHours(); //时
+		var mm = now.getMinutes();//分
+		var weekday = new Array(7);
+		weekday[0] = "星期日";
+		weekday[1] = "星期一";
+		weekday[2] = "星期二";
+		weekday[3] = "星期三";
+		weekday[4] = "星期四";
+		weekday[5] = "星期五";
+		weekday[6] = "星期六";
+		var w = weekday[now.getDay()]; //js获取的星期是0~6,0是星期天；
+		var clock = year + "-";
+		if (month < 10)
+			clock += "0";
+		clock += month + "-";
+
+		if (day < 10)
+			clock += "0";
+		clock += day + " ";
+		if (hh < 10)
+			clock += "0";
+
+		clock += hh + ":";
+		if (mm < 10)
+			clock += '0';
+		clock += mm + ":";
+		hh = hh < 10 ? "0" + hh : hh;
+		mm = mm < 10 ? "0" + mm : mm;
+		document.getElementById("times").innerHTML = "" + year + "年" + month
+				+ "月" + day + "日 " + w + "  " + hh + ":" + mm;
+		// t=setTimeout('showTime()',500)
+
+	}
+	onload = function() {
+		var d = new Date();
+		CurentTime()
+	}
+	$(function() {
+		$(".yezhuguanli").hide();
+		$(".yezhu").click(function() {
+			$(this).children().toggle();
+			//$(this).siblings().children().hide();
+
+		});
+	});
+</script>
+
+</head>
+<body>
+	<header>
+		<div class="wuye">
+			<img alt="" src="imgs/logo.png">
+			<h1>物业管理系统</h1>
+			<div id="time">
+				<img alt="" src="imgs/time.gif">
+				<p id="times"></p>
+			</div>
+		</div>
+	</header>
+	<article>
+		<div id="form_div">
+			<h3>系统菜单</h3>
+			<a href="denglu/demo01.html">注销登录</a>
+		</div>
+		<div id="ul1">
+			<ul>
+				<li class="yezhu">业主管理
+					<ul class="yezhuguanli">
+					<li><a href="xinxi.html">业主信息</a></li>
+					<li><a href="zhuce.html">添加信息</a></li>
+					</ul>
+				</li>
+				
+				<!-- <li><a href="news/Notice.html">公告与新闻</a></li> -->
+				<li class="yezhu">公告与新闻
+					<ul class="yezhuguanli">
+						<li><a href="news/Notice.html">公告新闻</a></li>
+						<li><a href="">添加公告新闻</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="">业主投诉</a></li>
+				<li><a href="weihu.html">业主报修</a></li>
+				<li><a href="cheweixinxi.html">车位管理</a></li>
+				<li><a href="">电梯广告</a></li>
+				
+				<li class="yezhu">费项管理
+					<ul class="yezhuguanli">
+						<li><a href="charge01.html">费用收取</a></li>
+						<li><a href="">费用支出</a></li>
+						<li><a href="charge.html">费用收取明细</a></li>
+					</ul>
+				</li>
+			
+				<li><a href="staff.html">工作人员信息</a></li>
+				
+				
+				<li class="yezhu">社区消防
+				<ul class="yezhuguanli">
+					<li><a href="activity.jsp">社区活动</a></li>
+					<li><a href="equipment.jsp">消防设施</a></li>
+					<li><a href="exer">消防演练</a></li>
+					<li><a href="">消防事故</a></li>	
+				</ul>
+				</li>
+				
+				<li class="yezhu">保洁绿化
+				<ul class="yezhuguanli">
+					<li><a href="">植被信息</a></li>
+					<li><a href="">绿化检查</a></li>
+					<li><a href="">保洁安排</a></li>
+					<li><a href="">保洁记录</a></li>	
+					<li><a href="">保洁检查</a></li>	
+				</ul>
+				</li>
+				
+				</ul>
+		</div>
+		<div id="a1">
+			<div>
+				<img alt="" src="imgs/arrow.gif">
+				<p>
+					<a href="news/Notice.html">最新公告</a>
+				</p>
+			</div>
+		</div>
+		<div id="a1">
+			<div>
+				<img alt="" src="imgs/arrow.gif">
+				<p>
+					<a href="">最新保修</a>
+				</p>
+			</div>
+		</div>
+		<div id="a1">
+			<div>
+				<img alt="" src="imgs/arrow.gif">
+				<p>
+					<a href="">业委会会议</a>
+				</p>
+			</div>
+		</div>
+		<div id="a1">
+			<div>
+				<img alt="" src="imgs/arrow.gif">
+				<p>
+					<a href="">业主投诉</a>
+				</p>
+			</div>
+		</div>
+		<div id="a1">
+			<div>
+				<img alt="" src="imgs/arrow.gif">
+				<p>
+					<a href="">规章制度</a>
+				</p>
+			</div>
+		</div>
+	</article>
+	<footer>
+		<div id="f"></div>
+		<p>©2017 天上人间物业有限公司 版权所有 京ICP证xxxxxxxxxxx</p>
+	</footer>
+</body>
+</html>

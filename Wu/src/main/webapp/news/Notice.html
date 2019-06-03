@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+table {
+	border-color: #dbdbdb;
+}
+
+th {
+	font-weight: normal;
+	background-color: #f0f0f0;
+	height: 30px;
+}
+
+td {
+	border-left: 0;
+	border-right: 0;
+}
+
+.size {
+	font-size: 14px;
+}
+tr>td {
+	margin: 5px;
+	padding: 5px;
+}
+</style>
+</head>
+<body>
+	<form action="Quick" method="post">
+		<div>
+			<table style="width: 100%;">
+				<tr>
+					<td width="160px;">快速检索： <select name="quick">
+							<option>公告主题</option>
+							<option>公告内容</option>
+							<option>公告时间</option>
+							<option>类型</option>
+							<option>状态</option>
+					</select>
+					</td>
+					<td><input type="text" name="quick_content" />
+					<select class="size">
+							<option>企业公告</option>
+							<option>业主公告</option>
+							<option>物业公告</option>
+					</select></td>
+					<td align="right"><input type="button" value="检索"
+						name="quick_so" /></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table cellspacing="0" rules="all" border="1"style="width: 100%">
+				<tr class="size">
+					<th width="5%"><img
+						src="http://haoke365b.ticp.net:91/images/refresh.gif"></th>
+					<th>公告主题</th>
+					<th>允许查看用户</th>
+					<th style="width: 60px;">类型</th>
+					<th style="width: 170px;">起始日期</th>
+					<th style="width: 60px;">状态</th>
+					<th style="width: 90px;">录入人</th>
+					<th style="width: 120px;">录入时间</th>
+				</tr>
+				<tr class="size">
+					<td>1</td>
+					<td><a href="One.html">温馨提示</a></td>
+					<td>所有人</td>
+					<td>企业</td>
+					<td><span>2019-02-01</span>至<span>2019-02-02</span></td>
+					<td>已发布</td>
+					<td>物业管理员</td>
+					<td>2019-05-03 10:26</td>
+				</tr>
+				<tr class="size">
+					<td>2</td>
+					<td><a href="Two.html">本周公务活动接待</a></td>
+					<td>所有人</td>
+					<td>企业</td>
+					<td><span>2019-02-01</span>至<span>2019-02-02</span></td>
+					<td>已发布</td>
+					<td>物业管理员</td>
+					<td>2019-05-03 10:26</td>
+				</tr>
+				<tr class="size">
+					<td>3</td>
+					<td><a href="Three.html">本周值班安排</a></td>
+					<td>所有人</td>
+					<td>企业</td>
+					<td><span>2019-02-01</span>至<span>2019-02-05</span></td>
+					<td>已发布</td>
+					<td>物业管理员</td>
+					<td>2019-05-03 10:25</td>
+				</tr>
+				<tr class="size">
+					<td>4</td>
+					<td><a href="Four.html">放假安全大检查</a></td>
+					<td>所有人</td>
+					<td>企业</td>
+					<td><span>2019-02-01</span>至<span>2019-02-02</span></td>
+					<td>已发布</td>
+					<td>物业管理员</td>
+					<td>2019-05-03 10:25</td>
+				</tr>
+				<tr class="size">
+					<td>5</td>
+					<td><a href="Five.html">关于国庆放假期间，值班人员的具体安排</a></td>
+					<td>所有人</td>
+					<td>企业</td>
+					<td><span>2001-01-01</span>至<span>2020-12-31</span></td>
+					<td>已发布</td>
+					<td>OA管理员</td>
+					<td>2019-04-23 18:16</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>

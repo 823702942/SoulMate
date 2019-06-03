@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Soulmate</display-name>
+  <servlet>
+    <servlet-name>AddActServlet</servlet-name>
+    <servlet-class>web.AddActServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddActServlet</servlet-name>
+    <url-pattern>/add-act</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DelActServlet</servlet-name>
+    <servlet-class>web.DelActServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelActServlet</servlet-name>
+    <url-pattern>/del-ac</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddEqServlet</servlet-name>
+    <servlet-class>web.AddEqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddEqServlet</servlet-name>
+    <url-pattern>/add-eq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DelEqServlet</servlet-name>
+    <servlet-class>web.DelEqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelEqServlet</servlet-name>
+    <url-pattern>/del-eq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ExerciseServlet</display-name>
+    <servlet-name>ExerciseServlet</servlet-name>
+    <servlet-class>web.ExerciseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExerciseServlet</servlet-name>
+    <url-pattern>/exer</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>车位信息</title>
+<link rel="stylesheet"href="chewei.css">
+<script type="text/javascript">
+onload=function(){
+	var d=new Date();
+	myh3.innerText=d.toLocaleTimeString();
+}
+setInterval(function(){
+	var d=new Date();
+	myh3.innerText=d.toLocaleTimeString();
+},1000);
+	function showTime(){
+		//转回时分秒
+		var h=parseInt(total/3600);
+		var m=parseInt(total%3600/60);
+		var s=total%60;
+		h=h<10?"0"+h:h;
+		m=m<10?"0"+m:m;
+		s=s<10?"0"+s:s;
+		myh2.innerText=h+":"+m+":"+s;
+	}
+</script>
+</head>
+<body>
+<header>
+				<div>
+				<img class="d1" src="http://haoke365b.ticp.net:91/images/logo.png">
+				<span class="d1">天上人间物业管理系统</span>
+				<img class="d3" src="http://haoke365b.ticp.net:91/images/time.gif">
+				<h2 id="myh3"></h2>
+				</div>
+</header>
+<article>
+<div class="ms">
+		<span class="zz">hi,诸葛经理<img src="http://haoke365b.ticp.net:91/images/remind.gif">
+		<img src="http://haoke365b.ticp.net:91/images/hot.gif">
+		</span>
+		<input type="button"value="注销退出"class="zx">
+				<select name="city"class="xl">
+				<option>个人设定</option>
+				<option>消息设置</option>
+				<option>修改密码</option>
+				<option>修改资料</option>
+				<option>万年历</option>
+				<option>在线人员</option>
+				<option>快捷方式</option>
+				<option>岗位职责</option>
+				<option selected="selected">个人选项</option>
+				</select>
+				<input type="button" value=刷新 onclick="history.go(0)" class="sx">
+</div>
+<div class="cw">
+				车位状态:<select name="city">
+				<option>所有</option>
+				<option>空闲</option>
+				<option>已售</option>
+				<option>已租</option>
+				<option selected="selected">所有</option>
+				</select>
+				车位编号：<input type="text">
+				<input type="button"value="查询">
+				<input type="button"value="增加"><br><br>
+				<div>
+				<img src="http://haoke365b.ticp.net:91/images/refresh.gif">
+				<span class="g1">所属公司</span>
+				<span class="g2">房产</span>
+				<span class="g3">车位编号</span>
+				<span class="g4">状态</span>
+				<span class="g5">车位类别&nbsp;管理类别</span>
+				<span class="g6">预售价格</span>
+				<span class="g7">预租价格</span>
+				<span class="g8">位置</span>
+				<span class="g9">面积</span>
+				</div>
+</div>
+</article>
+</body>
+</html>
