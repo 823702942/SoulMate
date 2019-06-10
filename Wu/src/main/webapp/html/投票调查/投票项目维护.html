@@ -1,0 +1,95 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>投票调查项目</title>
+    <link href="../guanli.css" type="text/css" rel="stylesheet" />
+    <script src="../../CssJs/MyJs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="main">
+    <form method="post" action="tpdc.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTgxNzgzMjEzDxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWAgIBD2QWCgIBDxAPFgIeB1Zpc2libGVnZGQWAWZkAgMPDxYCHgRUZXh0BSHlvZPliY3nlJ/mlYjnmoTosIPmn6Xpobnnm67kuLrvvJpkZAIEDw8WAh8CBS3jgIrlhbPkuo7lr7nkvpvlupTpk77ns7vnu5/nmoTpnIDmsYLph4fpm4bjgItkZAIIDzwrABEDAA8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAIBZAEQFgAWABYADBQrAAAWAmYPZBYEAgEPD2QWAh4Hb25jbGljawUZamF2YXNjcmlwdDpjaGFuZ2VCZyh0aGlzKRYOZg9kFgICAQ8PFgIfAgUBMWRkAgIPDxYCHwIFATNkZAIDD2QWBGYPFQEBM2QCAQ8PFgIfAgUn5YWz5LqO5a+55L6b5bqU6ZO+57O757uf55qE6ZyA5rGC6YeH6ZuGZGQCBA8PFgIfAgUG5LyB5LiaZGQCBQ8PFgIfAgUG5pyJ5pWIZGQCBg8PFgIfAgUGJm5ic3A7ZGQCBw8PFgIfAgUSMjAwOC81LzMxIDIwOjQ0OjMwZGQCAg8PFgIfAWhkZAIKDw8WBB4IUGFnZVNpemUCDx4LUmVjb3JkY291bnQCAWRkGAIFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBRNHcmlkVmlldzEkY3RsMDIkZGVsBQlHcmlkVmlldzEPPCsADAMGFQECaWQHFCsAARQrAAECAwgCAWQ=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" width="98%" align="center" border="0">
+                        <tr>
+                            <td style="height: 40px">
+                                <select name="lx" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;lx\&#39;,\&#39;\&#39;)&#39;, 0)" id="lx">
+	<option selected="selected" value="企业">企业</option>
+	<option value="供应商">供应商</option>
+	<option value="会员">会员</option>
+	<option value="物业业主">物业业主</option>
+	<option value="物业租户">物业租户</option>
+
+</select>
+                                <span id="label1">当前生效的调查项目为：</span><span id="label2" style="color:Red;">《关于对供应链系统的需求采集》</span>
+                            </td>
+                            <td align="right">
+                                <input type="button" name="AddBtn" value="增 加" class="mybtn" onclick="javascript: popAdd('tpdc_view.aspx');" />
+                                <input type="submit" name="DelBtn" value="删 除" onclick="return confirm(&#39;确认要执行删除吗？&#39;);" id="DelBtn" class="mybtn" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+	<table class="hkgv" cellspacing="0" rules="all" border="1" id="GridView1" style="width:100%;border-collapse:collapse;">
+		<tr class="hkHeadStyle">
+			<th scope="col" style="width:30px;"><img src="http://haoke365b.ticp.net:91/images/refresh.gif" alt="序号" /></th><th scope="col" style="width:30px;">
+                                                <input id="chkall" type="checkbox" onclick="chkAll();" title="全选或全不选" style="width: 16px; height: 16px" />
+                                            </th><th class="hidden" scope="col">编码</th><th scope="col" style="width:200px;">项目名称</th><th scope="col" style="width:70px;">类型</th><th scope="col" style="width:70px;">状态</th><th scope="col">项目说明</th><th scope="col" style="width:140px;">创建时间</th>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl02_Label1">1</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl02_del" type="checkbox" name="GridView1$ctl02$del" /></span>
+                                            </td><td class="hidden">3</td><td>
+                                                <a href="#" onclick="javascript:popMod('tpdc_view.aspx?id=3')" class="gvlink">
+                                                    <span id="GridView1_ctl02_Labelyjje">关于对供应链系统的需求采集</span></a>
+                                            </td><td align="center">企业</td><td align="center">有效</td><td>&nbsp;</td><td align="center">2008/5/31 20:44:30</td>
+		</tr>
+	</table>
+</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 22px">
+                                
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

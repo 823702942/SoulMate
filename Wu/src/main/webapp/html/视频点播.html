@@ -1,0 +1,76 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>视频点播</title>
+    <link href="../../CssJs/Main.css" type="text/css" rel="stylesheet" />
+    <script src="../../CssJs/MyJs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="main">
+    <form method="post" action="spdb.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA4MjE4MzU4OQ8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgICAQ9kFgQCCw88KwARAwAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnQCAWQBEBYAFgAWAAwUKwAAFgJmD2QWBAIBDw9kFgIeB29uY2xpY2sFGWphdmFzY3JpcHQ6Y2hhbmdlQmcodGhpcykWDGYPZBYCAgEPDxYCHgRUZXh0BQExZGQCAg8PFgIfBAUBN2RkAgMPZBYEZg8VAQE3ZAIBDw8WAh8EBRvkuK3pk7bkv6HnlKjljaHlrqPkvKDop4bpopFkZAIEDw8WAh8EBQnkupLogZTnvZFkZAIFD2QWAgIBDw8WAh8EBQ/kvIHkuJrlrqPkvKDniYdkZAIGDw8WAh8EBQoyMDE4LTEyLTE3ZGQCAg8PFgIeB1Zpc2libGVoZGQCDQ8PFgQeCFBhZ2VTaXplAg8eC1JlY29yZGNvdW50AgFkZBgCBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUTR3JpZFZpZXcxJGN0bDAyJGRlbAUJR3JpZFZpZXcxDzwrAAwDBhUBBHNwaWQHFCsAARQrAAECBwgCAWQ=" />
+</div>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <table cellspacing="0" cellpadding="0" width="98%" border="0">
+                        <tr>
+                            <td style="height: 40px">快速检索：<select name="query_tj" id="query_tj">
+	<option value="spmc">视频名称</option>
+	<option value="sply">来源</option>
+	<option value="b.mc">视频类型</option>
+	<option value="cjsj">创建时间</option>
+
+</select>
+                                <input name="query_content" type="text" id="query_content" class="mytext" style="width:100px;" />
+                            </td>
+                            <td align="right">
+                                <input type="submit" name="QueryBtn" value="查询" id="QueryBtn" class="mybtn" />
+                                <input name="AddBtn" type="button" id="AddBtn" value="增加" class="mybtn" onclick="javascript: popAdd(&#39;spdb_add.aspx&#39;);" />
+                                <input type="submit" name="DelBtn" value="删除" onclick="return confirm(&#39;确认要执行删除吗？&#39;);" id="DelBtn" class="mybtn" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+	<table class="hkgv" cellspacing="0" rules="all" border="1" id="GridView1" style="width:100%;border-collapse:collapse;">
+		<tr class="hkHeadStyle">
+			<th scope="col" style="width:30px;"><img src="http://haoke365b.ticp.net:91/images/refresh.gif" alt="序号" /></th><th scope="col" style="width:30px;">
+                                                <input id="chkall" type="checkbox" onclick="chkAll();" title="全选或全不选" style="width: 16px; height: 16px" />
+                                            </th><th class="hidden" scope="col">视频编码</th><th scope="col">视频名称</th><th scope="col">来源</th><th scope="col" style="width:100px;">视频类型</th><th scope="col" style="width:100px;">创建时间</th>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl02_Label1">1</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl02_del" type="checkbox" name="GridView1$ctl02$del" /></span>
+                                            </td><td class="hidden">7</td><td>
+                                                <a href="#" onclick="javascript:popMod('spdb_mod.aspx?id=7')" class="gvlink">
+                                                    <span id="GridView1_ctl02_Labelyjje">中银信用卡宣传视频</span></a>
+                                            </td><td>互联网</td><td align="center">
+                                                <span id="GridView1_ctl02_Label2">企业宣传片</span>
+                                            </td><td align="center">2018-12-17</td>
+		</tr>
+	</table>
+</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 22px">
+                                
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

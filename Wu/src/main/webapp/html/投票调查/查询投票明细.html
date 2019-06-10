@@ -1,0 +1,58 @@
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../guanli.css" type="text/css" rel="stylesheet" />
+    <script src="../../CssJs/MyJs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="main">
+    <form method="post" action="cksj.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMTUwNDAwMjgPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCAgEPZBYEAgEPDxYCHgdWaXNpYmxlZ2RkAgMPEA8WAh8BZ2RkFgFmZGQ=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+    <table cellspacing="0" cellpadding="0" width="100%" align="center">
+        <tr>
+            <td style="height: 5px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;<span id="lxnr">请选择类型：</span>
+                <select name="qhlx" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;qhlx\&#39;,\&#39;\&#39;)&#39;, 0)" id="qhlx" style="width:100px;">
+	<option selected="selected" value="企业">企业</option>
+	<option value="供应商">供应商</option>
+	<option value="会员">会员</option>
+	<option value="物业业主">物业业主</option>
+	<option value="物业租户">物业租户</option>
+
+</select>
+            </td>
+        </tr>
+    </table>
+    <table class='table_1' cellspacing='1' id='table1' cellpadding='1' width='60%' align='center'><tr class='tr2'><td align=center><b><font color=blue>《关于对供应链系统的需求采集》</font></b></td></tr><tr class='tr2'><td align=center>[<a href='dcjg.aspx?lx=企业&id=3' title='2008/6/21 17:43:26'>1</a>]&nbsp;[<a href='dcjg.aspx?lx=企业&id=7' title='2012/10/6 22:10:48'>2</a>]&nbsp;[<a href='dcjg.aspx?lx=企业&id=8' title='2012/10/6 22:14:55'>3</a>]&nbsp;[<a href='dcjg.aspx?lx=企业&id=9' title='2012/12/13 20:38:45'>4</a>]&nbsp;[<a href='dcjg.aspx?lx=企业&id=10' title='2012/12/13 20:41:49'>5</a>]&nbsp;[<a href='dcjg.aspx?lx=企业&id=11' title='2012/12/13 20:42:44'>6</a>]&nbsp;</td></tr></table>
+    </form>
+</body>
+</html>

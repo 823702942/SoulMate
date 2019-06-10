@@ -1,0 +1,110 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>公告管理</title>
+    <link href="../../CssJs/Main.css" type="text/css" rel="stylesheet" />
+    <script src="../../CssJs/MyJs.js" type="text/javascript" charset="gb2312"></script>
+</head>
+<body class="main">
+    <form method="post" action="qygg.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTA2MjM3NTg0Mw8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgICAQ9kFgYCBQ8QDxYCHgdWaXNpYmxlZ2RkFgECAmQCEQ88KwARAwAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnQCAWQBEBYAFgAWAAwUKwAAFgJmD2QWBAIBDw9kFgIeB29uY2xpY2sFGWphdmFzY3JpcHQ6Y2hhbmdlQmcodGhpcykWEGYPZBYCAgEPDxYCHgRUZXh0BQExZGQCAg9kFgRmDxUBATlkAgEPDxYCHwUFIemdouWQkeWlveWuouWVhuWcuuS8muWRmOeahOmAmuWRimRkAgMPDxYCHwUFBiZuYnNwO2RkAgQPDxYCHwUFBuS8muWRmGRkAgUPZBYEAgEPDxYCHwUFCjIwMDgtMDUtMDFkZAIDDw8WAh8FBQoyMDIwLTEyLTMxZGQCBg8PFgIfBQUJ5bey5Y+R5biDZGQCBw8PFgIfBQUMU0NN566h55CG5ZGYZGQCCA9kFgICAQ8PFgIfBQUQMjAxMi0xMC0wNiAyMTozM2RkAgIPDxYCHwFoZGQCEw8PFgQeCFBhZ2VTaXplAg8eC1JlY29yZGNvdW50AgFkZBgCBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUTR3JpZFZpZXcxJGN0bDAyJGRlbAUJR3JpZFZpZXcxDzwrAAwDBhUBBGdnaWQHFCsAARQrAAECCQgCAWQZaFGNL05YoTm2XdwlP8jhbknXLGTXhONWJCHjuvu4aQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C7F48744" />
+</div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" width="98%" align="center" border="0">
+                        <tr>
+                            <td style="height: 40px">快速检索：<select name="query_tj" id="query_tj">
+	<option selected="selected" value="ggzt">公告主题</option>
+	<option value="ggnr">公告内容</option>
+	<option value="zt">状态</option>
+
+</select>
+                                <input name="query_content" type="text" id="query_content" class="mytext" style="width:100px;" />
+                                <select name="lx" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;lx\&#39;,\&#39;\&#39;)&#39;, 0)" id="lx">
+	<option value="企业">企业公告</option>
+	<option value="供应商">供应商公告</option>
+	<option selected="selected" value="会员">会员公告</option>
+	<option value="物业业主">物业业主公告</option>
+
+</select>
+                            </td>
+                            <td align="right">
+                                <input type="submit" name="QueryBtn" value="查 询" id="QueryBtn" class="mybtn" />
+                                <input name="AddBtn" type="button" id="AddBtn" value="增 加" class="mybtn" onclick="javascript: popAdd(&#39;qygg_add.aspx&#39;);" />
+                                <input type="submit" name="UseBtn" value="发 布" id="UseBtn" class="mybtn" />
+                                <input type="submit" name="StopBtn" value="暂 停" id="StopBtn" class="mybtn" />
+                                <input type="submit" name="DelBtn" value="删 除" onclick="return confirm(&#39;确认要执行删除吗？&#39;);" id="DelBtn" class="mybtn" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+	<table class="hkgv" cellspacing="0" rules="all" border="1" id="GridView1" style="width:100%;border-collapse:collapse;">
+		<tr class="hkHeadStyle">
+			<th scope="col" style="width:30px;"><img src="http://haoke365b.ticp.net:91/images/refresh.gif" alt="序号" /></th><th scope="col" style="width:30px;">
+                                                <input id="chkall" type="checkbox" onclick="chkAll();" title="全选或全不选" style="width: 16px; height: 16px" />
+                                            </th><th scope="col">公告主题</th><th scope="col">允许查看用户</th><th scope="col" style="width:60px;">类型</th><th scope="col" style="width:170px;">起止日期</th><th scope="col" style="width:60px;">状态</th><th scope="col" style="width:90px;">录入人</th><th scope="col" style="width:120px;">录入时间</th>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl02_Label1">1</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl02_del" type="checkbox" name="GridView1$ctl02$del" /></span>
+                                            </td><td>
+                                                <a href="#" onclick="javascript:popMod('qygg_mod.aspx?id=9')" class="gvlink">
+                                                    <span id="GridView1_ctl02_lblgv">面向好客商场会员的通告</span></a>
+                                            </td><td>&nbsp;</td><td align="center">会员</td><td align="center">
+                                                <span id="GridView1_ctl02_Label2">2008-05-01</span>至<span id="GridView1_ctl02_Label3">2020-12-31</span>
+                                            </td><td align="center">已发布</td><td>SCM管理员</td><td align="center">
+                                                <span id="GridView1_ctl02_lbllrsj">2012-10-06 21:33</span>
+                                            </td>
+		</tr>
+	</table>
+</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 22px">
+                                
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,166 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	员工通讯录
+</title><link href="../guanli.css" type="text/css" rel="stylesheet" />
+    <script src="../../CssJs/MyJs.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../CssJs/WebCalendar.js"></script>
+    
+    <script type="text/javascript">
+        function delf() {
+            if (!confirm("是否确定删除此部门？"))
+                return false;
+        }
+    </script>
+</head>
+<body class="main">
+    <form method="post" action="Ygtxl_r.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="form">
+                        <tr>
+                            <td align="right">姓名：
+                            </td>
+                            <td>
+                                <input name="jsName" type="text" id="jsName" class="mytext" />
+                            </td>
+                            <td align="right">职位：
+                            </td>
+                            <td>
+                                <input name="jsPost" type="text" id="jsPost" class="mytext" />
+                            </td>
+                            <td align="right">性别：
+                            </td>
+                            <td>
+                                <input name="jsSex" type="text" id="jsSex" class="mytext" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="5">
+                                <input type="submit" name="QueryBtn" value="查询" id="QueryBtn" class="mybtn" />
+                                <input type="submit" name="AddBtn" value="增加" id="AddBtn" class="mybtn" />
+                                <input type="submit" name="showbtn" value="查看" onclick="javascript:return modcheck();" id="showbtn" class="mybtn" />
+                                <input type="submit" name="updatebtn" value="修改" onclick="javascript:return modcheck();" id="updatebtn" class="mybtn" />
+                                <input type="submit" name="DelBtn" value="删除" onclick="javascript:return delcheck();" id="DelBtn" class="mybtn" />
+                                <a href="javascript:void(0)" onclick="chkAllw()" class="gvlink">全选</a>
+                                <a href="javascript:void(0)" onclick="revchkAll()" class="gvlink">反选</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">姓氏索引：
+                            </td>
+                            <td colspan="5"><a href='ygtxl_r.aspx?XS=C' class=gvlink>C(1)</a>&nbsp;&nbsp;<a href='ygtxl_r.aspx?XS=D' class=gvlink>D(1)</a>&nbsp;&nbsp;<a href='ygtxl_r.aspx?XS=L' class=gvlink>L(1)</a>&nbsp;&nbsp;<a href='ygtxl_r.aspx?XS=S' class=gvlink>S(2)</a>&nbsp;&nbsp;<a href='ygtxl_r.aspx?XS=Z' class=gvlink>Z(1)</a>&nbsp;&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+            <tr>
+                <td colspan="2">
+                    <div>
+	<table class="hkgv" cellspacing="0" rules="all" border="1" id="GridView1" style="width:100%;border-collapse:collapse;">
+		<tr class="hkHeadStyle">
+			<th scope="col" style="width:30px;"><img src="http://haoke365b.ticp.net:91/images/refresh.gif" alt="序号" /></th><th align="center" scope="col" style="white-space:nowrap;">选择</th><th scope="col">姓名</th><th scope="col">职位</th><th scope="col">办公电话</th>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                    <span id="GridView1_ctl02_lblxh">1</span>
+                                </td><td align="center" style="width:30px;">
+                                    <input id="GridView1_ctl02_CheckSelect" type="checkbox" name="GridView1$ctl02$CheckSelect" />
+                                    
+                                    
+                                </td><td>貂禅</td><td>行政助理</td><td>010-89123456</td>
+		</tr><tr class="hkAltRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                    <span id="GridView1_ctl03_lblxh">2</span>
+                                </td><td align="center" style="width:30px;">
+                                    <input id="GridView1_ctl03_CheckSelect" type="checkbox" name="GridView1$ctl03$CheckSelect" />
+                                    
+                                    
+                                </td><td>诸葛亮</td><td>财务总监</td><td>010-89233322</td>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                    <span id="GridView1_ctl04_lblxh">3</span>
+                                </td><td align="center" style="width:30px;">
+                                    <input id="GridView1_ctl04_CheckSelect" type="checkbox" name="GridView1$ctl04$CheckSelect" />
+                                    
+                                    
+                                </td><td>孙权</td><td>总经理</td><td>010-88888888</td>
+		</tr><tr class="hkAltRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                    <span id="GridView1_ctl05_lblxh">4</span>
+                                </td><td align="center" style="width:30px;">
+                                    <input id="GridView1_ctl05_CheckSelect" type="checkbox" name="GridView1$ctl05$CheckSelect" />
+                                    
+                                    
+                                </td><td>刘备</td><td>代理CEO</td><td>010-71322345</td>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                    <span id="GridView1_ctl06_lblxh">5</span>
+                                </td><td align="center" style="width:30px;">
+                                    <input id="GridView1_ctl06_CheckSelect" type="checkbox" name="GridView1$ctl06$CheckSelect" />
+                                    
+                                    
+                                </td><td>曹操</td><td>董事长</td><td>021-33221122</td>
+		</tr><tr class="hkAltRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                    <span id="GridView1_ctl07_lblxh">6</span>
+                                </td><td align="center" style="width:30px;">
+                                    <input id="GridView1_ctl07_CheckSelect" type="checkbox" name="GridView1$ctl07$CheckSelect" />
+                                    
+                                    
+                                </td><td>孙策</td><td>副总经理</td><td>021-23238822</td>
+		</tr>
+	</table>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="15%" style="height: 30; width: 15%">类别操作：</td>
+                <td colspan="3" style="width: 85%">
+                    <a id="LinkButton3" href="javascript:__doPostBack(&#39;LinkButton3&#39;,&#39;&#39;)">新建子类别</a>
+                    <a id="LinkButton4" href="javascript:__doPostBack(&#39;LinkButton4&#39;,&#39;&#39;)">修改类别</a>
+                    <a onclick="javascript:return delf();" id="LinkButton5" href="javascript:__doPostBack(&#39;LinkButton5&#39;,&#39;&#39;)">删除此类别</a>
+                    类别名：未选择类别
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 22px">
+                    
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

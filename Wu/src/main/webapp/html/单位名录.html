@@ -1,0 +1,103 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>单位名录</title>
+    <link href="../../CssJs/Main.css" type="text/css" rel="stylesheet" />
+    <script src="../../CssJs/MyJs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="main">
+    <form method="post" action="dwml.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ5MTA2NDc4NQ8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgICAQ9kFgQCCw88KwARAwAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnQCBGQBEBYAFgAWAAwUKwAAFgJmD2QWCgIBDw9kFgIeB29uY2xpY2sFGWphdmFzY3JpcHQ6Y2hhbmdlQmcodGhpcykWDGYPZBYCAgEPDxYCHgRUZXh0BQExZGQCAg8PFgIfBAUBMWRkAgMPZBYEZg8VAQExZAIBDw8WAh8EBRXmtY7ljZfpuL/ogZTljLvoja/ljoJkZAIEDw8WAh8EBQ0wNTMxLTg5MTQyMjI0ZGQCBQ8PFgIfBAURaGVscEBob25nbGlhbi5jb21kZAIGDw8WAh8EBSDmtY7ljZfluILljobln47ljLrlsbHlpKfot68zOOWPt2RkAgIPD2QWAh8DBRlqYXZhc2NyaXB0OmNoYW5nZUJnKHRoaXMpFgxmD2QWAgIBDw8WAh8EBQEyZGQCAg8PFgIfBAUBMmRkAgMPZBYEZg8VAQEyZAIBDw8WAh8EBSrmtY7ljZflpKnms6Lnp7vliqjpgJrkv6HmnInpmZDotKPku7vlhazlj7hkZAIEDw8WAh8EBQ0wNTMxLTg3OTQzODQwZGQCBQ8PFgIfBAUGJm5ic3A7ZGQCBg8PFgIfBAUe5qeQ6I2r5Yy657uP5LqU57qs5YWt6LevMTc15Y+3ZGQCAw8PZBYCHwMFGWphdmFzY3JpcHQ6Y2hhbmdlQmcodGhpcykWDGYPZBYCAgEPDxYCHwQFATNkZAICDw8WAh8EBQEzZGQCAw9kFgRmDxUBATNkAgEPDxYCHwQFKua1juWNl+iBlOWuh+eUteWtkOmAmuS/oeaciemZkOi0o+S7u+WFrOWPuGRkAgQPDxYCHwQFDTA1MzEtODc5NDM4NDFkZAIFDw8WAh8EBQYmbmJzcDtkZAIGDw8WAh8EBR7ljobkuIvljLrop6PmlL7ot6/ljoblsbExMjnlj7dkZAIEDw9kFgIfAwUZamF2YXNjcmlwdDpjaGFuZ2VCZyh0aGlzKRYMZg9kFgICAQ8PFgIfBAUBNGRkAgIPDxYCHwQFATRkZAIDD2QWBGYPFQEBNGQCAQ8PFgIfBAUb5rWO5Y2X5biC6YKu56Wo5Lqk5piT5biC5Zy6ZGQCBA8PFgIfBAUNMDUzMS04NjkxNjUwNmRkAgUPDxYCHwQFBiZuYnNwO2RkAgYPDxYCHwQFJ+a1juWNl+W4guWkqeahpeWMuui9puermeihl+mCruelqOW4guWcumRkAgUPDxYCHgdWaXNpYmxlaGRkAg0PDxYEHghQYWdlU2l6ZQIPHgtSZWNvcmRjb3VudAIEZGQYAgUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFE0dyaWRWaWV3MSRjdGwwMiRkZWwFE0dyaWRWaWV3MSRjdGwwMyRkZWwFE0dyaWRWaWV3MSRjdGwwNCRkZWwFE0dyaWRWaWV3MSRjdGwwNSRkZWwFCUdyaWRWaWV3MQ88KwAMAwYVAQJpZAcUKwAEFCsAAQIBFCsAAQICFCsAAQIDFCsAAQIECAIBZA==" />
+</div>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <table cellspacing="0" cellpadding="0" width="98%" border="0">
+                        <tr>
+                            <td style="height: 40px">快速检索：<select name="query_tj" id="query_tj">
+	<option value="dwmc">单位名称</option>
+	<option value="dwdz">单位地址</option>
+	<option value="dwdh">单位电话</option>
+	<option value="dzyj">电子邮件</option>
+	<option value="dwlx">单位类型</option>
+	<option value="dwjb">单位级别</option>
+
+</select>
+                                <input name="query_content" type="text" id="query_content" class="mytext" style="width:100px;" />
+                            </td>
+                            <td align="right">
+                                <input type="submit" name="QueryBtn" value="查询" id="QueryBtn" class="mybtn" />
+                                <input name="AddBtn" type="button" id="AddBtn" value="增加" class="mybtn" onclick="javascript: popAdd(&#39;dwml_add.aspx&#39;);" />
+                                <input type="submit" name="DelBtn" value="删除" onclick="return confirm(&#39;确认要执行删除吗？&#39;);" id="DelBtn" class="mybtn" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+	<table class="hkgv" cellspacing="0" rules="all" border="1" id="GridView1" style="width:100%;border-collapse:collapse;">
+		<tr class="hkHeadStyle">
+			<th scope="col" style="width:30px;"><img src="http://haoke365b.ticp.net:91/images/refresh.gif" alt="序号" /></th><th scope="col" style="width:30px;">
+                                                <input id="chkall" type="checkbox" onclick="chkAll();" title="全选或全不选" style="width: 16px; height: 16px" />
+                                            </th><th class="hidden" scope="col">编码</th><th scope="col">单位名称</th><th scope="col" style="width:100px;">单位电话</th><th scope="col" style="width:120px;">电子邮件</th><th scope="col">单位地址</th>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl02_Label1">1</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl02_del" type="checkbox" name="GridView1$ctl02$del" /></span>
+                                            </td><td class="hidden">1</td><td>
+                                                <a href="#" onclick="javascript:popMod('dwml_mod.aspx?id=1')" class="gvlink">
+                                                    <span id="GridView1_ctl02_Labelyjje">济南鸿联医药厂</span></a>
+                                            </td><td>0531-89142224</td><td>help@honglian.com</td><td>济南市历城区山大路38号</td>
+		</tr><tr class="hkAltRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl03_Label1">2</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl03_del" type="checkbox" name="GridView1$ctl03$del" /></span>
+                                            </td><td class="hidden">2</td><td>
+                                                <a href="#" onclick="javascript:popMod('dwml_mod.aspx?id=2')" class="gvlink">
+                                                    <span id="GridView1_ctl03_Labelyjje">济南天波移动通信有限责任公司</span></a>
+                                            </td><td>0531-87943840</td><td>&nbsp;</td><td>槐荫区经五纬六路175号</td>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl04_Label1">3</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl04_del" type="checkbox" name="GridView1$ctl04$del" /></span>
+                                            </td><td class="hidden">3</td><td>
+                                                <a href="#" onclick="javascript:popMod('dwml_mod.aspx?id=3')" class="gvlink">
+                                                    <span id="GridView1_ctl04_Labelyjje">济南联宇电子通信有限责任公司</span></a>
+                                            </td><td>0531-87943841</td><td>&nbsp;</td><td>历下区解放路历山129号</td>
+		</tr><tr class="hkAltRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl05_Label1">4</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl05_del" type="checkbox" name="GridView1$ctl05$del" /></span>
+                                            </td><td class="hidden">4</td><td>
+                                                <a href="#" onclick="javascript:popMod('dwml_mod.aspx?id=4')" class="gvlink">
+                                                    <span id="GridView1_ctl05_Labelyjje">济南市邮票交易市场</span></a>
+                                            </td><td>0531-86916506</td><td>&nbsp;</td><td>济南市天桥区车站街邮票市场</td>
+		</tr>
+	</table>
+</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 22px">
+                                
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

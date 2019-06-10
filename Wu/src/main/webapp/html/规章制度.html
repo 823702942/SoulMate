@@ -1,0 +1,126 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>规章制度</title>
+    <link href="../../CssJs/Main.css" type="text/css" rel="stylesheet" />
+    <script src="../../CssJs/MyJs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="main">
+    <form method="post" action="gzzd.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMjYwMTYzODAwDxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWAgIBD2QWBgIFDxAPFgIeB1Zpc2libGVnZGQWAWZkAhEPPCsAEQMADxYEHgtfIURhdGFCb3VuZGceC18hSXRlbUNvdW50AgNkARAWABYAFgAMFCsAABYCZg9kFggCAQ8PZBYCHgdvbmNsaWNrBRlqYXZhc2NyaXB0OmNoYW5nZUJnKHRoaXMpFg5mD2QWAgIBDw8WAh4EVGV4dAUBMWRkAgIPZBYEZg8VAQExZAIBDw8WAh8FBR7lm7rlrprotYTkuqfku5PlupPnrqHnkIbop4TojINkZAIDDw8WAh8FBQzlhajpg6jnlKjmiLdkZAIEDw8WAh8FBQgyMDA4MDUwMWRkAgUPDxYCHwUFBuS8geS4mmRkAgYPDxYCHwUFCeW3suWPkeW4g2RkAgcPDxYCHwUFCjIwMTgtMTEtMjJkZAICDw9kFgIfBAUZamF2YXNjcmlwdDpjaGFuZ2VCZyh0aGlzKRYOZg9kFgICAQ8PFgIfBQUBMmRkAgIPZBYEZg8VAQEyZAIBDw8WAh8FBRzkv6Hmga/pg6jns7vnu5/mk43kvZzop4TojIMgZGQCAw8PFgIfBQUM5YWo6YOo55So5oi3ZGQCBA8PFgIfBQUIMjAxMDEyMTJkZAIFDw8WAh8FBQbkvIHkuJpkZAIGDw8WAh8FBQnlt7Llj5HluINkZAIHDw8WAh8FBQoyMDEyLTExLTA2ZGQCAw8PZBYCHwQFGWphdmFzY3JpcHQ6Y2hhbmdlQmcodGhpcykWDmYPZBYCAgEPDxYCHwUFATNkZAICD2QWBGYPFQEBM2QCAQ8PFgIfBQUV5a+E5YyF5ZGY5bel5L2c6KeE6IyDZGQCAw8PFgIfBQUM5YWo6YOo55So5oi3ZGQCBA8PFgIfBQUIMjAxMDEwMTJkZAIFDw8WAh8FBQbkvIHkuJpkZAIGDw8WAh8FBQnlt7Llj5HluINkZAIHDw8WAh8FBQoyMDExLTExLTAyZGQCBA8PFgIfAWhkZAITDw8WBB4IUGFnZVNpemUCDx4LUmVjb3JkY291bnQCA2RkGAIFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBRNHcmlkVmlldzEkY3RsMDIkZGVsBRNHcmlkVmlldzEkY3RsMDMkZGVsBRNHcmlkVmlldzEkY3RsMDQkZGVsBQlHcmlkVmlldzEPPCsADAMGFQEEemRpZAcUKwADFCsAAQIBFCsAAQICFCsAAQIDCAIBZA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" width="98%" align="center" border="0">
+                        <tr>
+                            <td style="height: 40px">快速检索：<select name="query_tj" id="query_tj">
+	<option value="zdbt">制度标题</option>
+	<option value="zdnr">制度内容</option>
+	<option value="ztc">主题词</option>
+	<option value="zdwh">文号</option>
+	<option value="zddj">等级</option>
+	<option value="zt">状态</option>
+
+</select>
+                                <input name="query_content" type="text" id="query_content" class="mytext" style="width:100px;" />
+                                <select name="lx" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;lx\&#39;,\&#39;\&#39;)&#39;, 0)" id="lx">
+	<option selected="selected" value="企业">企业规章</option>
+	<option value="供应商">供应商规章</option>
+	<option value="会员">会员规章</option>
+	<option value="物业业主">物业业主规章</option>
+
+</select>
+                            </td>
+                            <td align="right">
+                                <input type="submit" name="QueryBtn" value="查 询" id="QueryBtn" class="mybtn" />
+                                <input name="AddBtn" type="button" id="AddBtn" value="增 加" class="mybtn" onclick="javascript: popView(&#39;gzzd_add.aspx&#39;);" />
+                                <input type="submit" name="UseBtn" value="发 布" id="UseBtn" class="mybtn" />
+                                <input type="submit" name="StopBtn" value="暂 停" id="StopBtn" class="mybtn" />
+                                <input type="submit" name="DelBtn" value="删 除" onclick="return confirm(&#39;确认要执行删除吗？&#39;);" id="DelBtn" class="mybtn" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+	<table class="hkgv" cellspacing="0" rules="all" border="1" id="GridView1" style="width:100%;border-collapse:collapse;">
+		<tr class="hkHeadStyle">
+			<th scope="col" style="width:30px;"><img src="http://haoke365b.ticp.net:91/images/refresh.gif" alt="序号" /></th><th scope="col" style="width:30px;">
+                                                <input id="chkall" type="checkbox" onclick="chkAll();" title="全选或全不选" style="width: 16px; height: 16px" />
+                                            </th><th scope="col">标题</th><th scope="col">允许查看用户</th><th scope="col" style="width:90px;">文号</th><th scope="col" style="width:60px;">类型</th><th scope="col" style="width:60px;">状态</th><th scope="col" style="width:100px;">创建时间</th>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl02_Label1">1</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl02_del" type="checkbox" name="GridView1$ctl02$del" /></span>
+                                            </td><td>
+                                                <a href="#" onclick="javascript:popView('gzzd_mod.aspx?id=1')"
+                                                    class="gvlink">
+                                                    <span id="GridView1_ctl02_lblgv">固定资产仓库管理规范</span></a>
+                                            </td><td>全部用户</td><td>20080501</td><td align="center">企业</td><td align="center">已发布</td><td align="center">2018-11-22</td>
+		</tr><tr class="hkAltRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl03_Label1">2</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl03_del" type="checkbox" name="GridView1$ctl03$del" /></span>
+                                            </td><td>
+                                                <a href="#" onclick="javascript:popView('gzzd_mod.aspx?id=2')"
+                                                    class="gvlink">
+                                                    <span id="GridView1_ctl03_lblgv">信息部系统操作规范 </span></a>
+                                            </td><td>全部用户</td><td>20101212</td><td align="center">企业</td><td align="center">已发布</td><td align="center">2012-11-06</td>
+		</tr><tr class="hkRowStyle" onclick="javascript:changeBg(this)">
+			<td align="center">
+                                                <span id="GridView1_ctl04_Label1">3</span>
+                                            </td><td align="center" style="height:18px;width:30px;">
+                                                <span class="mybox"><input id="GridView1_ctl04_del" type="checkbox" name="GridView1$ctl04$del" /></span>
+                                            </td><td>
+                                                <a href="#" onclick="javascript:popView('gzzd_mod.aspx?id=3')"
+                                                    class="gvlink">
+                                                    <span id="GridView1_ctl04_lblgv">寄包员工作规范</span></a>
+                                            </td><td>全部用户</td><td>20101012</td><td align="center">企业</td><td align="center">已发布</td><td align="center">2011-11-02</td>
+		</tr>
+	</table>
+</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 22px">
+                                
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+<!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
